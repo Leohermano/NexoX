@@ -1,0 +1,9 @@
+@NexoX_API_HostAddress = http://localhost:5000
+
+GET {{NexoX_API_HostAddress}}/
+Accept: application/json
+
+###
+
+GET {{NexoX_API_HostAddress}}/api/saude
+Accept: application/json

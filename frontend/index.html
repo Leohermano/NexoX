@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NexoX | Organizador de rotina</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="#">
+    <img
+        src="/frontend/img/logo-nexox.png"
+        alt="Logo NexoX"
+        class="brand-logo"
+    >
+    <span>NexoX</span>
+</a>
+    <p class="menu-label">MENU</p>
+    <a class="nav active" href="#">▦ <span>Visão geral</span></a>
+    <a class="nav" href="#tarefas">✓ <span>Minhas tarefas</span></a>
+    <a class="nav" href="#agenda">▣ <span>Agenda</span></a>
+    <div class="sidebar-bottom">Organize seu dia.<br><strong>Conquiste seus objetivos.</strong></div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div><span class="eyebrow">SEU ESPAÇO DE ORGANIZAÇÃO</span><h1>Visão geral</h1></div>
+      <div class="avatar">Lh</div>
+    </header>
+
+    <section class="welcome">
+      <div><p class="eyebrow light">SEU DIA, DO SEU JEITO</p><h2>Vamos organizar suas ideias?</h2>
+      <p>Planeje sua rotina e avance no que realmente importa.</p></div>
+      <div class="welcome-symbol">N<span>×</span></div>
+    </section>
+
+    <section class="stats">
+      <article class="stat"><span>Tarefas de hoje</span><strong id="total">0</strong><small>Adicione sua primeira tarefa</small></article>
+      <article class="stat"><span>Concluídas</span><strong id="done">0</strong><small>Passo a passo, você chega lá</small></article>
+      <article class="stat"><span>Pendentes</span><strong id="pending">0</strong><small>O que ainda precisa ser feito</small></article>
+    </section>
+
+    <section class="content-grid">
+      <article class="panel" id="tarefas">
+        <div class="panel-heading"><div><span class="eyebrow">PLANEJAMENTO</span><h3>Minhas tarefas</h3></div></div>
+        <form id="task-form" class="task-form">
+          <input id="task-input" type="text" placeholder="Ex.: estudar C# por 1 hora" maxlength="90" required>
+          <button type="submit">Adicionar</button>
+        </form>
+        <ul id="task-list" class="task-list"><li class="empty">Nenhuma tarefa por enquanto. Adicione uma acima!</li></ul>
+      </article>
+      <article class="panel agenda" id="agenda">
+        <span class="eyebrow">AGENDA</span><h3>Seu planejamento</h3>
+        <div class="agenda-date" id="today"></div>
+        <p>Em breve, você poderá organizar compromissos por data e horário.</p>
+        <div class="api-status"><span class="status-dot"></span><span id="api-message">Verificando conexão com a API...</span></div>
+      </article>
+    </section>
+    <footer>NexoX <span>•</span> Sua rotina conectada.</footer>
+  </main>
+  <script src="js/app.js"></script>
+</body>
+</html>
